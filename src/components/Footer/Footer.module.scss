@@ -1,0 +1,36 @@
+.footer {
+  height: 137px;
+  background-color: rgba(2, 148, 145, 1);
+  padding: 0 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100em;
+  overflow: visible;
+
+  .contactsDataContainer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: right;
+    gap: 20px;
+
+    .contactsData {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .footer {
+    padding: 0 15px 0 10px;
+    width: 100%;
+
+    .footerLogo {
+      width: 111px;
+      height: 111px;
+    }
+  }
+}

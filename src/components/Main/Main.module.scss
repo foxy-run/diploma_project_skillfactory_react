@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'Ferry Black';
+  src: url('../../assets/Ferry-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.root {
+  margin: 0 40px;
+
+  .publicationSearchContainer {
+    display: flex;
+  }
+
+  .paragraph,
+  .ourTariffs {
+    font-family: 'Ferry Black', sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 100px;
+  }
+
+  .ourTariffs {
+    font-size: 45px;
+  }
+
+  .slider {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+
+  .tariffCardsContainer {
+    display: flex;
+    gap: 50px;
+  }
+}
+
+.sliderContainerWrapper {
+  position: relative;
+  overflow: hidden;
+
+  .sliderContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .cardsContainer {
+      display: flex;
+      gap: 30px;
+      width: 1250px;
+      padding: 10px 10px;
+      z-index: 0;
+
+      .rightArrow,
+      {
+        position: absolute;
+        right: 10px;
+        top: 95px;
+        cursor: pointer;
+        user-select: none;
+        z-index: 1;
+      }
+
+      .leftArrow,
+      {
+        position: absolute;
+        top: 95px;
+        margin-left: -8px;
+        cursor: pointer;
+        user-select: none;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.getDataByInnButton,
+.seeDetailsButton,
+.loginButton,
+.searchButton,
+.showMoreButton,
+.readSourceButton,
+.activatedTariff,
+.searchButtonActive,
+{
+  background-color: rgba(89, 112, 255, 1);
+  color: white;
+  width: 335px;
+  height: 59px;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.getDataByInnButton a {
+  color: white;
+}
+
+.seeDetailsButton,
+.activatedTariff {
+  width: 355px;
+  margin-left: 30px;
+  margin-top: 60px;
+}
+
+.loginButton {
+  width: 379px;
+  opacity: 50%;
+  margin-top: 35px;
+  margin-bottom: 15px;
+
+  a {
+    color: white;
+  }
+}
+
+.searchButton,
+.searchButtonActive,
+.blockedButton {
+  width: 305px;
+  opacity: 50%;
+}
+
+.searchButton {
+  cursor: not-allowed;
+}
+
+.searchButtonActive {
+  opacity: 100%;
+}
+
+.showMoreButton {
+  width: 305px;
+  opacity: 100%;
+}
+
+.readSourceButton {
+  background-color: rgba(124, 227, 225, 1);
+  width: 223px;
+  height: 47px;
+  font-size: 16px;
+  color: black;
+}
+
+.activatedTariff {
+  background-color: rgba(210, 210, 210, 1);
+  color: black;
+}
+
+@media all and (max-width: 400px) {
+  .root {
+    margin: 0 10px;
+    overflow: hidden;
+
+    .publicationSearchContainer {
+      flex-direction: column;
+    }
+
+    .paragraph,
+    .ourTariffs {
+      font-size: 28px;
+      margin-top: 30px;
+      width: 280px
+    }
+
+    .paragraph {
+      width: 375px;
+    }
+
+    .sliderContainer {
+      margin-bottom: 20px;
+
+      .cardsContainer {
+        margin-left: 20px;
+
+        .rightArrow {
+          right: 15px;
+        }
+
+        .leftArrow {
+          left: 7px;
+          z-index: 1;
+        }
+      }
+    }
+
+    .sittingManImg {
+      width: 891px;
+      height: 392px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+
+    .tariffCardsContainer {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .activatedTariff,
+    .seeDetailsButton {
+      width: 287px;
+      font-size: 18px;
+      margin: 40px 23px;
+    }
+
+    .getDataByInnButton {
+      margin-top: 20px;
+    }
+  }
+
+  .loginButton {
+    width: 305px;
+    font-size: 20px;
+  }
+
+  .searchButton,
+  .searchButtonActive {
+    display: block;
+    margin-top: 30px;
+  }
+}
+
+
+

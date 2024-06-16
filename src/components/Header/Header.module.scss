@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 93px;
+  margin: 0 40px;
+  max-width: 1440px;
+}
+
+@media all and (max-width: 400px) {
+  .header {
+    margin: 0 10px;
+    gap: 30px;
+
+    .headerLogo {
+      width: 111px;
+      height: 111px;
+    }
+  }
+}

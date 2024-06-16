@@ -1,0 +1,283 @@
+.root {
+  display: flex;
+
+  .paragraph-container {
+    margin: 0 40px;
+
+    .paragraph {
+      font-family: 'Ferry Black', sans-serif;
+      font-size: 40px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-top: 70px;
+    }
+
+    .text {
+      font-size: 20px;
+    }
+  }
+
+  .container {
+    display: flex;
+    padding-top: 30px;
+    box-sizing: border-box;
+    gap: 60px;
+    width: 872px;
+    height: 543px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+    border-radius: 10px;
+    margin: 60px 40px 100px 40px;
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      font-size: 18px;
+      margin: 0 10px 0 40px;
+
+      .errorMessage,
+      .innError,
+      {
+        display: flex;
+        position: absolute;
+        font-size: 14px;
+        color: rgba(255, 89, 89, 1);
+      }
+
+      .input-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .innError {
+          position: absolute;
+          bottom: -20px;
+        }
+
+        .dropdown-arrow,
+        .startDateDropdown,
+        .endDateDropdown {
+          position: absolute;
+          border-top: 10px solid rgba(217, 217, 217, 1);
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+          width: 0;
+          height: 0;
+          top: 55px;
+          right: 155px;
+        }
+
+        .startDateDropdown {
+          right: 210px;
+        }
+
+        .endDateDropdown {
+          right: 8px;
+        }
+      }
+
+      .input,
+      .date-input,
+      .inputError {
+        width: 242px;
+        height: 43px;
+        border-radius: 5px;
+        border: 1px solid rgba(199, 199, 199, 1);
+        outline: none;
+        background-color: transparent;
+      }
+
+      .inputError {
+        border: 1px solid rgba(255, 89, 89, 1);
+        color: rgba(255, 89, 89, 1);;
+      }
+
+      .input::placeholder {
+        text-align: center;
+        color: rgba(148, 148, 148, 1)
+      }
+
+      .date-input {
+        width: 176px;
+        text-align: center;
+      }
+
+      .date-range-container {
+        display: flex;
+        gap: 20px;
+      }
+    }
+
+    .checkbox-button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .checkbox-options-container {
+        display: flex;
+        flex-direction: column;
+        color: black;
+        gap: 10px;
+        font-size: 18px;
+
+        .checkbox-options-container__option {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .checkbox-input {
+          width: 20px;
+          height: 20px;
+          border: 1px solid black;
+          user-select: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .checkmark {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      .button-container {
+        position: relative;
+        margin-bottom: 20px;
+        margin-right: -15px;
+
+        .submitError,
+        {
+          display: flex;
+          position: absolute;
+          font-size: 14px;
+          color: rgba(255, 89, 89, 1);
+          top: 0;
+          text-align: center;
+        }
+      }
+    }
+
+    .button-container-mobile {
+      display: none;
+    }
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    margin-top: 150px;
+
+    .image-container__images-on-the-top {
+      display: flex;
+      gap: 190px;
+      margin-left: -35px;
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .root {
+
+    .paragraph-container {
+      margin: 0 10px;
+
+      .paragraph {
+        font-size: 28px;
+      }
+
+      .text {
+        font-size: 18px;
+        width: 297px;
+      }
+    }
+
+    .container {
+      width: 375px;
+      height: 688px;
+      margin: 15px 0 460px;
+      flex-direction: column;
+      align-items: center;
+
+      .form-container {
+        margin: 0 auto;
+
+        .date-range-container {
+          display: flex;
+          flex-direction: column;
+
+          .dropdown-arrow {
+            right: 20px;
+          }
+
+          .date-input {
+            width: 335px;
+            height: 43px;
+          }
+        }
+
+        .input-container {
+
+          .dropdown-arrow,
+          .startDateDropdown,
+          .endDateDropdown {
+            right: 20px;
+          }
+
+          .endDateDropdown {
+            top: 120px;
+          }
+        }
+
+        .input,
+        .inputError {
+          width: 335px;
+          height: 43px;
+        }
+      }
+
+      .checkbox-button-container {
+        display: none;
+      }
+
+      .button-container-mobile {
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        position: relative;
+        margin-bottom: 20px;
+        margin-left: 15px;
+      }
+    }
+
+    .image-container {
+      width: 0;
+      height: 0;
+
+      .document {
+        position: absolute;
+        right: 40px;
+        top: 260px;
+        width: 58px;
+        height: 71px;
+      }
+
+      .folders {
+        display: none;
+      }
+
+      .manLookingOut {
+        position: absolute;
+        left: 25px;
+        bottom: 160px;
+        width: 380px;
+        height: 403px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.root {
+  width: 400px;
+  min-width: 400px;
+  height: 225px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+  border-radius: 10px;
+  padding: 35px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  resize: none;
+}
+
+@media all and (max-width: 400px) {
+  .root {
+    width: 298px;
+    min-width: 298px;
+  }
+}

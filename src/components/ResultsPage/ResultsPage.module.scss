@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'Ferry Black';
+  src: url('../../assets/Ferry-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.firstBlock {
+  display: flex;
+  gap: 200px;
+
+  .paragraphContainer {
+    margin: 0 40px;
+
+    .paragraph {
+      font-family: 'Ferry Black', sans-serif;
+      font-size: 40px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-top: 70px;
+    }
+
+    .text {
+      font-size: 20px;
+    }
+  }
+}
+
+.statsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 40px;
+
+  .stats {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Ferry Black', sans-serif;
+  }
+
+  .foundItems {
+    font-size: 18px;
+    color: rgba(148, 148, 148, 1)
+  }
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 60px;
+
+  .leftArrow,
+  .rightArrow {
+    margin-top: -50px;
+    opacity: 30%;
+  }
+
+  .leftArrow {
+    margin-left: 30px;
+  }
+
+  .activeRightArrow {
+    margin-top: -50px;
+    opacity: 100%;
+  }
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 23px;
+  width: 1260px;
+  overflow: hidden;
+  border: 2px solid rgba(2, 148, 145, 1);
+  border-radius: 10px;
+  margin-top: -50px;
+  margin-left: 5px;
+
+  .statNameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 133px;
+    height: 158px;
+    background-color: rgba(2, 148, 145, 1);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.statsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 18px;
+}
+
+.separator {
+  height: 124px;
+  border: 1px solid rgba(148, 148, 148, 1);
+  align-self: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.articleCardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media all and (max-width: 400px) {
+  .firstBlock {
+
+    .woman {
+      position: absolute;
+      width: 350px;
+      height: 233px;
+      top: 340px;
+    }
+
+    .paragraphContainer {
+      width: 335px;
+      margin: 0 0 300px 10px;
+
+      .paragraph {
+        font-size: 28px;
+      }
+
+      .text {
+        font-size: 18px;
+        width: 344px;
+      }
+    }
+  }
+
+  .slider {
+
+    .cardsContainer {
+      flex-direction: column;
+      height: 150px;
+
+      .statsWrapper {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-left: 10px;
+        gap: 40px;
+      }
+
+      .statNameContainer {
+        flex-direction: row;
+        height: 75px;
+        min-height: 75px;
+        box-sizing: border-box;
+        justify-content: space-around;
+      }
+    }
+  }
+
+  .statsContainer {
+    margin-left: 10px;
+  }
+}
+

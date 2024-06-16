@@ -1,0 +1,205 @@
+@font-face {
+  font-family: 'Ferry Black';
+  src: url('../../assets/Ferry-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.root {
+  display: flex;
+  gap: 80px;
+  position: relative;
+  margin: 0 40px 100px 40px;
+
+  .paragraph {
+    font-family: 'Ferry Black', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 100px;
+  }
+
+  .key-carriers-img {
+    margin-left: 100px;
+  }
+
+  .key-lock {
+    position: absolute;
+    right: 535px;
+    top: 45px;
+  }
+
+  .login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 429px;
+    height: 523px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 100px;
+
+    .login-signup-container {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      padding-top: 20px;
+
+      .login-signup-container__login,
+      .login-signup-container__signup {
+        font-size: 16px;
+        text-align: center;
+        padding-bottom: 5px;
+        width: 151px;
+        border-bottom: 2px solid rgba(2, 148, 145, 1);
+        color: rgba(2, 148, 145, 1);
+      }
+
+      .login-signup-container__signup {
+        width: 213px;
+        border-bottom: 2px solid rgba(199, 199, 199, 1);
+        color: rgba(199, 199, 199, 1);
+      }
+    }
+
+    .alternative-login {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 25px;
+      margin-left: -50px;
+
+      .account-name-container {
+        display: flex;
+        gap: 15px;
+
+        .account-name {
+          width: 96px;
+          height: 31px;
+          border: 1px solid rgba(89, 112, 255, 0.51);
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .form-container {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+
+    .form-container__form {
+      display: flex;
+      flex-direction: column;
+      color: rgba(148, 148, 148, 1);
+      font-size: 16px;
+      gap: 15px;
+
+      .form__email-input-container,
+      .form__password-input-container {
+        display: flex;
+        flex-direction: column;
+
+        .errorMessage {
+          font-size: 14px;
+          color: rgba(255, 89, 89, 1);
+        }
+
+        .form__input,
+        .form__input_error {
+          width: 379px;
+          max-width: 379px;
+          height: 43px;
+          border: 1px solid rgba(199, 199, 199, 1);
+          border-radius: 5px;
+          outline: none;
+        }
+
+        .form__input_error {
+          border: 1px solid rgba(255, 89, 89, 1);
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .root {
+    flex-direction: column;
+    margin: 0 10px;
+
+    .paragraph {
+      font-size: 22px;
+      width: 383px;
+      margin-top: 40px;
+    }
+
+    .key-lock {
+      top: 185px;
+      left: 70px;
+    }
+
+    .key-carriers-img {
+      position: absolute;
+      bottom: 50px;
+      left: -100px;
+      width: 335px;
+      height: 356px;
+    }
+
+    .login-form-container {
+      width: 335px;
+      height: 504px;
+      margin-top: 20px;
+      margin-bottom: 450px;
+
+      .login-signup-container {
+
+        .login-signup-container__login {
+          width: 103px;
+        }
+
+        .login-signup-container__signup {
+          width: 182px;
+        }
+      }
+
+      .alternative-login {
+        margin: 25px auto 0;
+
+        .account-name-container {
+          gap: 5px;
+        }
+      }
+
+      .form-container {
+
+        .form-container__form {
+
+          .form__email-input-container {
+            gap: 10px;
+
+            .form__input,
+            .form__input_error,
+            {
+              width: 305px;
+            }
+          }
+
+          .form__password-input-container {
+            gap: 10px;
+
+            .form__input,
+            .form__input_error {
+              width: 305px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
