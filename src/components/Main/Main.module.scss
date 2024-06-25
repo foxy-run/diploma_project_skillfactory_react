@@ -7,6 +7,8 @@
 
 .root {
   margin: 0 40px;
+  max-width: 100%;
+
 
   .publicationSearchContainer {
     display: flex;
@@ -43,22 +45,26 @@
   position: relative;
   overflow: hidden;
 
-  .sliderContainer {
+    .sliderContainer {
     display: flex;
     align-items: center;
+    margin-left: 15px;
     margin-bottom: 50px;
 
     .cardsContainer {
       display: flex;
       gap: 30px;
-      width: 1250px;
-      padding: 10px 10px;
+
+      padding: 10px 35px;
       z-index: 0;
+
+
 
       .rightArrow,
       {
         position: absolute;
-        right: 10px;
+        right: -12px;
+        padding-left: 10px;
         top: 95px;
         cursor: pointer;
         user-select: none;
@@ -69,7 +75,7 @@
       {
         position: absolute;
         top: 95px;
-        margin-left: -8px;
+        left: 4px;
         cursor: pointer;
         user-select: none;
         z-index: 1;
@@ -86,6 +92,7 @@
 .readSourceButton,
 .activatedTariff,
 .searchButtonActive,
+.loginButtonActive,
 {
   background-color: rgba(89, 112, 255, 1);
   color: white;
@@ -121,6 +128,10 @@
   }
 }
 
+.loginButton:disabled, .loginButton:hover:disabled{
+  cursor: not-allowed;
+
+}
 .searchButton,
 .searchButtonActive,
 .blockedButton {
@@ -130,10 +141,12 @@
 
 .searchButton {
   cursor: not-allowed;
+  margin-right: 40px;
 }
 
 .searchButtonActive {
   opacity: 100%;
+  margin-right: 40px;
 }
 
 .showMoreButton {

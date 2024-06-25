@@ -66,6 +66,8 @@
           height: 0;
           top: 55px;
           right: 155px;
+          margin-right: 15px;
+          margin-top: 5px;
         }
 
         .startDateDropdown {
@@ -86,6 +88,7 @@
         border: 1px solid rgba(199, 199, 199, 1);
         outline: none;
         background-color: transparent;
+        padding-left: 10px;
       }
 
       .inputError {

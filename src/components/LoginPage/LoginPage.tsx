@@ -13,6 +13,7 @@ import {useNavigate} from "react-router-dom";
 import {getLimitInfo} from "../../redux/slices/eventFiltersSlice";
 import {IAuthCredentials} from "../../types";
 import api from "../../api/http";
+import {isDisabled} from "@testing-library/user-event/dist/utils";
 
 type TInputForm = {
     login?: string,
@@ -25,7 +26,7 @@ export default function LoginPage() {
         login: '',
         password: ''
     })
-
+    const [isDisabled, setIsDisabled] = useState(true);
     const [isLoginValid, setIsLoginValid] = useState(false);
     const [isPasswordValid, setIsPasswordValid] = useState(false);
     const [error, setError] = useState({
@@ -163,7 +164,7 @@ export default function LoginPage() {
                         </div>
                     </form>
                 </div>
-                <button type='submit' className={st.loginButton} onClick={getInfo}>
+                <button type='submit'  className={isDisabled ? st.loginButtonActive : st.loginButton} onClick={getInfo} >
                     Войти
                 </button>
                 <span><a href='/login' style={
